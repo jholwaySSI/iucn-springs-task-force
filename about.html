@@ -160,12 +160,18 @@
       align-items: center;
     }
 
-    .split-image img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-    }
+  .split-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #667069;
+  margin-top: 10px;
+}
 
     /* Focus grid */
     .focus-grid {
@@ -392,10 +398,6 @@
         margin-bottom: 60px;
       }
 
-      .split-image img {
-        height: 340px;
-      }
-
       .focus-grid,
       .two-paths {
         grid-template-columns: 1fr;
@@ -483,11 +485,16 @@
 
         </div>
 
-        <div class="split-image">
-          <img
-            src="spring-threat.jpg"
-            alt="Spring ecosystem illustrating the importance and vulnerability of springs">
-        </div>
+       <div class="split-image">
+  <img
+    src="spring-threat.jpg"
+    alt="Vasey's Paradise spring flowing from the canyon wall in Grand Canyon, Arizona">
+
+  <div class="image-caption">
+    Vasey's Paradise, Grand Canyon, USA. Once a prominent spring along the
+    Colorado River, its flow has recently ceased.
+  </div>
+</div>
 
       </section>
 
