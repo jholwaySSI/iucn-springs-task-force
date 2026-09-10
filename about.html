@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About | IUCN Global Springs Task Force</title>
+
+  <meta name="description" content="Learn about the IUCN Global Springs Task Force, an inter-Commission effort advancing global science, standards, inventories, assessments, and conservation guidance for springs.">
+
+  <link rel="canonical" href="https://iucnspringstaskforce.org/about.html">
+
+  <meta property="og:title" content="About | IUCN Global Springs Task Force">
+  <meta property="og:description" content="A global inter-Commission effort advancing the science and frameworks needed to conserve springs worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iucnspringstaskforce.org/about.html">
 
   <style>
     * {
@@ -14,28 +24,29 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      background:
-        linear-gradient(
-          rgba(8, 27, 20, 0.55),
-          rgba(8, 27, 20, 0.72)
-        ),
-        url("spring.jpg");
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
+      color: #1f2924;
+      background: #ffffff;
+      line-height: 1.6;
     }
 
+    /* Navigation */
     header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
       padding: 28px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: white;
     }
 
     .site-name {
       font-size: 20px;
       font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
     nav a {
@@ -50,50 +61,207 @@
       opacity: 0.75;
     }
 
-    main {
-      min-height: calc(100vh - 90px);
+    /* Hero */
+    .hero {
+      min-height: 56vh;
+      background:
+        linear-gradient(
+          rgba(8, 27, 20, 0.38),
+          rgba(8, 27, 20, 0.65)
+        ),
+        url("spring.jpg");
+
+      background-size: cover;
+      background-position: center;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
+      align-items: flex-end;
+      padding: 0 6% 7%;
+      color: white;
     }
 
-    .content {
-      max-width: 800px;
+    .hero-content {
+      max-width: 1000px;
     }
 
-    .label {
+    .hero-label {
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(50px, 8vw, 100px);
+      font-size: clamp(48px, 7vw, 88px);
       line-height: 1;
-      margin-bottom: 25px;
+      font-weight: 700;
+      letter-spacing: -2px;
     }
 
-    p {
+    /* Main content */
+    .content {
+      max-width: 1100px;
+      margin: auto;
+      padding: 95px 8%;
+    }
+
+    .intro {
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.35;
+      margin-bottom: 90px;
+      max-width: 1000px;
+    }
+
+    .section {
+      margin-bottom: 90px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #55705f;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 28px;
+      letter-spacing: -1px;
+    }
+
+    .section p {
       font-size: 19px;
-      line-height: 1.6;
+      line-height: 1.75;
+      margin-bottom: 22px;
+      max-width: 900px;
     }
 
+    /* Goals grid */
+    .goals {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .goal {
+      border-top: 2px solid #55705f;
+      padding-top: 22px;
+    }
+
+    .goal h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .goal p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin-top: 40px;
+    }
+
+    .year {
+      border-top: 1px solid #d7ddd9;
+      padding: 30px 0;
+    }
+
+    .year h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .year p {
+      margin-bottom: 0;
+      font-size: 17px;
+    }
+
+    /* Closing statement */
+    .closing {
+      background: #f3f6f4;
+      padding: 80px 8%;
+    }
+
+    .closing-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .closing p {
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #dddddd;
+      padding: 35px 6%;
+      font-size: 14px;
+      color: #667069;
+    }
+
+    footer a {
+      color: #55705f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
     @media (max-width: 700px) {
       header {
         padding: 22px 5%;
+        align-items: flex-start;
+        gap: 18px;
       }
 
       .site-name {
         font-size: 16px;
+        max-width: 180px;
+      }
+
+      nav {
+        text-align: right;
       }
 
       nav a {
-        margin-left: 12px;
-        font-size: 13px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 50vh;
+        padding: 0 6% 12%;
+      }
+
+      .content {
+        padding: 70px 7%;
+      }
+
+      .intro {
+        margin-bottom: 65px;
+      }
+
+      .section {
+        margin-bottom: 65px;
+      }
+
+      .goals {
+        grid-template-columns: 1fr;
+      }
+
+      .closing {
+        padding: 65px 7%;
       }
     }
   </style>
@@ -113,15 +281,270 @@
   </header>
 
   <main>
-    <div class="content">
-      <div class="label">About</div>
-      <h1>Coming Soon</h1>
-      <p>
-        We are currently developing the IUCN Global Springs Task Force website.
-        Please check back soon for more information.
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-label">About the Task Force</div>
+
+        <h1>
+          Building a Global<br>
+          Foundation for Springs Conservation
+        </h1>
+      </div>
+    </section>
+
+    <section class="content">
+
+      <p class="intro">
+        The IUCN Global Springs Task Force is an inter-Commission initiative
+        bringing together scientists, conservation practitioners, policy experts,
+        and knowledge holders from around the world to advance the understanding,
+        recognition, and protection of springs.
       </p>
-    </div>
+
+      <section class="section">
+        <div class="section-label">Why Springs</div>
+
+        <h2>Small ecosystems with global importance</h2>
+
+        <p>
+          Springs occur where groundwater reaches the Earth's surface, creating
+          ecological connections between groundwater, surface water, and
+          terrestrial environments. Although often small in area, springs can
+          support exceptionally high biodiversity, including species found
+          nowhere else.
+        </p>
+
+        <p>
+          Springs also sustain rivers, wetlands, wildlife, and human communities.
+          For Indigenous Peoples and local communities around the world, many
+          springs carry profound cultural, spiritual, and livelihood importance.
+        </p>
+
+        <p>
+          Yet springs remain among the world's most overlooked freshwater
+          ecosystems. Groundwater extraction, climate change, land-use change,
+          infrastructure development, contamination, and the loss of traditional
+          stewardship practices are degrading and eliminating springs across
+          continents and biomes.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-label">The Global Gap</div>
+
+        <h2>Springs often fall through the cracks</h2>
+
+        <p>
+          Despite their importance, springs are rarely mapped consistently,
+          lack a universally applied classification system, and remain poorly
+          represented in many global conservation frameworks.
+        </p>
+
+        <p>
+          Their small size, isolation, and complex connections to groundwater
+          make them difficult to address through conservation approaches designed
+          primarily for larger rivers, wetlands, landscapes, or protected areas.
+          Global springs data are fragmented, conservation methods vary widely,
+          and many spring-dependent species remain poorly documented.
+        </p>
+
+        <p>
+          The Task Force was created to help close this gap by establishing a
+          shared scientific foundation for understanding, assessing, prioritizing,
+          and conserving springs worldwide.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Why an Inter-Commission Task Force</div>
+
+        <h2>Connecting species, ecosystems, and protected areas</h2>
+
+        <p>
+          Springs do not fit neatly within a single conservation discipline.
+          Protecting them requires expertise in biodiversity, ecology,
+          hydrogeology, ecosystem management, protected areas, policy, and
+          community stewardship.
+        </p>
+
+        <p>
+          The Task Force therefore works across three IUCN Commissions: the
+          World Commission on Protected Areas (WCPA), the Species Survival
+          Commission (SSC), and the Commission on Ecosystem Management (CEM).
+          This structure connects expertise in species conservation, ecosystem
+          integrity, and protected-area management within a coordinated global
+          effort.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-label">What We Will Do</div>
+
+        <h2>A shared framework for global springs conservation</h2>
+
+        <div class="goals">
+
+          <div class="goal">
+            <h3>Define and Inventory</h3>
+            <p>
+              Develop globally consistent definitions, classifications, and
+              methods for identifying, documenting, and mapping springs.
+            </p>
+          </div>
+
+          <div class="goal">
+            <h3>Build a Global Database</h3>
+            <p>
+              Bring together existing inventories, scientific information,
+              field data, and conservation assessments in an accessible global
+              springs information system.
+            </p>
+          </div>
+
+          <div class="goal">
+            <h3>Assess Condition</h3>
+            <p>
+              Develop methods and standards for evaluating ecological condition,
+              hydrological connectivity, vulnerability, and protection of spring
+              ecosystems.
+            </p>
+          </div>
+
+          <div class="goal">
+            <h3>Identify Priorities</h3>
+            <p>
+              Identify spring ecosystems, species, and geographic regions of
+              exceptional conservation importance or urgent risk.
+            </p>
+          </div>
+
+          <div class="goal">
+            <h3>Strengthen Global Recognition</h3>
+            <p>
+              Improve the representation of springs within mechanisms including
+              the IUCN Red List, Key Biodiversity Areas, Ramsar Sites, protected
+              areas, OECMs, and other conservation frameworks.
+            </p>
+          </div>
+
+          <div class="goal">
+            <h3>Develop Guidance</h3>
+            <p>
+              Produce practical guidance, best practices, and conservation tools
+              that can be used by governments, conservation organizations,
+              practitioners, and communities.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">Four-Year Program</div>
+
+        <h2>From foundations to global guidance</h2>
+
+        <div class="timeline">
+
+          <div class="year">
+            <h3>Year 1 — Foundations and Mapping</h3>
+            <p>
+              Establish definitions and inventory standards, build the global
+              expert network, and identify major geographic and conservation
+              information gaps.
+            </p>
+          </div>
+
+          <div class="year">
+            <h3>Year 2 — Data and Assessment</h3>
+            <p>
+              Begin development of the global springs database, advance
+              assessments of spring-dependent species, and develop ecological
+              and hydrological assessment methods.
+            </p>
+          </div>
+
+          <div class="year">
+            <h3>Year 3 — Prioritization and Strategy</h3>
+            <p>
+              Identify priority springs, species, and regions and connect these
+              priorities with conservation mechanisms and policy frameworks.
+            </p>
+          </div>
+
+          <div class="year">
+            <h3>Year 4 — Guidance and Capacity</h3>
+            <p>
+              Produce conservation guidance, management best practices, action
+              plans, policy resources, and capacity-building materials for
+              global application.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-label">A Collaborative Effort</div>
+
+        <h2>Global expertise, shared knowledge</h2>
+
+        <p>
+          The Task Force brings together a geographically and disciplinarily
+          diverse network of researchers, practitioners, conservation leaders,
+          Indigenous knowledge holders, and policy experts.
+        </p>
+
+        <p>
+          It is designed to collaborate with existing IUCN Specialist Groups,
+          freshwater initiatives, conservation organizations, governments,
+          universities, and communities rather than duplicate their work.
+          Through collaboration and shared standards, the Task Force aims to
+          connect regional expertise into a coherent global effort.
+        </p>
+
+        <p>
+          Coordination and institutional support are provided by the Spring
+          Stewardship Institute in the United States and the Council for
+          Scientific and Industrial Research in South Africa.
+        </p>
+      </section>
+
+    </section>
+
+    <section class="closing">
+      <div class="closing-inner">
+
+        <div class="section-label">Our Goal</div>
+
+        <p>
+          To ensure that springs are recognized, understood, and safeguarded
+          as foundational components of freshwater biodiversity, water security,
+          and resilient landscapes worldwide.
+        </p>
+
+      </div>
+    </section>
+
   </main>
+
+  <footer>
+    © 2026 IUCN Global Springs Task Force
+    &nbsp; | &nbsp;
+
+    <a href="https://globalspringsalliance.org/">
+      Global Springs Alliance
+    </a>
+
+    &nbsp; | &nbsp;
+
+    <a href="https://www.instagram.com/iucnspringstaskforce/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Instagram
+    </a>
+  </footer>
 
 </body>
 </html>
